@@ -1,0 +1,431 @@
+
+/*
+全局粉红: #ec44a1
+全局黄色: #ffbb14
+*/
+
+header {
+    width: 100%;
+    background: #000;
+    position: absolute;
+    overflow: hidden;
+}
+
+header .title-img {
+    width: 100%;
+    height: 100%;
+    background: url("../imgs/icon-title.jpg") no-repeat top center / 90%;
+    position: absolute;
+    top: 0;
+    left: 0;
+}
+
+header .title-img img.left {
+    animation: shock 15s .4s ease-in-out infinite alternate;
+}
+
+header .title-img img.right {
+    float: right;
+    margin: 60px 40px 0 0;
+    animation: ani-scale 3s ease-in-out infinite alternate;
+}
+
+.rotate {
+    animation: ani-rotate 4s ease-in-out infinite alternate;
+}
+
+header .event-container {
+    position: relative;
+    padding: 80% 22px 0;
+    z-index: 1000;
+}
+
+header .event-container .btn-event {
+    display: inline-block;
+    color: #fff;
+    background: #ec44a1;
+    border-radius: 19px;
+    width: 44%;
+    height: 38px;
+    font-size: 16px;
+    font-weight: bold;
+    text-align: center;
+    line-height: 38px;
+}
+
+
+/*搜索框*/
+header .searchbar-container {
+    width: 100%;
+    height: 48px;
+    position: relative;
+    z-index: 0;
+    background: #000;
+    text-align: left;
+    margin: 10px auto 0 auto;
+}
+
+header .searchbar-container .wrapper {
+    width: 90%;
+    height: 38px;
+    position: relative;
+    overflow: hidden;
+    border-radius: 19px;
+    background: red;
+    margin-left: 5%;
+}
+
+header .searchbar-container .wrapper input {
+    display: block;
+    position: absolute;
+    height: 38px;
+    padding-left: 40px;
+    top: 0;
+    left: 0;
+    z-index: 0;
+    font-size: 14px;
+    color: #ef4faf;
+    background: #fff;
+    text-align: left;
+}
+
+::-webkit-input-placeholder {
+    color: #ef4faf;
+}
+
+header .searchbar-container .wrapper img {
+    display: inline-block;
+    position: relative;
+    z-index: 100;
+    margin-top: 9px;
+    margin-left: 12px;
+}
+
+
+.float-left {
+    float: left;
+}
+
+.float-right {
+    float: right;
+}
+
+
+.border-bottom {
+    border-bottom: 1px solid #eee;
+}
+
+.mui-scroll .mui-table-view {
+
+}
+
+.rank-cell {
+    display: block;
+    width: 100%;
+    height: 85px;
+    position: relative;
+}
+
+.rank-cell .rank-num-view {
+    width: 53px;
+    height: 60px;
+    /*background: url("../imgs/icon-gold-medal.png") no-repeat top center / 53px 60px;*/
+    background: url("../imgs/icon-num-bg.png") no-repeat center center / 37px 37px;
+    display: inline-block;
+    position: absolute;
+    top: 12px;
+    left: 5px;
+    text-align: center;
+    line-height: 60px;
+    font-size: 20px;
+    font-weight: 500;
+    color: #a5a5a5;
+}
+
+.rank-cell .user-avatar-view {
+    width: 55px;
+    height: 55px;
+    background: url("../imgs/icon-avatar.jpg") no-repeat top center / 55px 55px;
+    border-radius: 8px;
+    position: absolute;
+    top: 14px;
+    left: 67px;
+}
+
+.rank-cell .lighten-container {
+    height: 100%;
+    width: 58px;
+    position: absolute;
+    right: 0;
+    top: 0;
+}
+
+.rank-cell .lighten-container p {
+    margin-top: 8px;
+    display: block;
+    width: 100%;
+    height: 40px;
+    background: url("../imgs/icon-heart.png") no-repeat top center / 45px 36px;
+    color: #fff;
+    font-size: 14px;
+    text-align: center;
+    padding-top: 6px;
+}
+
+.rank-cell .lighten-container a {
+    display: block;
+    margin: -9px auto 0;
+    width: 85%;
+    height: 24px;
+    background: #ffbb14;
+    border-radius: 12px;
+    color: #fff;
+    text-align: center;
+    line-height: 24px;
+    font-size: 13px;
+}
+
+.rank-cell .detail-container {
+    display: block;
+    width: 100%;
+    padding: 0 50px 0 132px;
+    height: 100%;
+    overflow: hidden;
+}
+
+.rank-cell .detail-container p {
+    margin-bottom: 0;
+}
+
+.rank-cell .detail-container p.nickname {
+    height: 21px;
+    line-height: 21px;
+    font-weight: bold;
+    font-size: 15px;
+    color: #000;
+    margin-top: 10px;
+
+    overflow: hidden;
+    text-overflow: ellipsis;
+    white-space: nowrap;
+}
+
+.rank-cell .detail-container p.mocaID {
+    height: 21px;
+    line-height: 21px;
+    font-size: 14px;
+}
+
+.rank-cell .detail-container p.sign {
+    height: 21px;
+    line-height: 21px;
+    font-size: 13px;
+    text-overflow: ellipsis;
+    white-space: nowrap;
+    overflow: hidden;
+}
+
+/*弹出窗*/
+.popover {
+    text-align: center;
+    padding-bottom: 10px;
+    position: relative;
+}
+
+.popover div.flower-num {
+    display: inline-block;
+
+    width: 50%;
+    height: 30px;
+    float: left;
+    margin-top: 10px;
+}
+
+.popover div.flower-num a {
+    display: inline-block;
+    background: orange;
+    line-height: 30px;
+    color: #fff;
+    font-size: 14px;
+    border-radius: 7px;
+    width: 80%;
+    height: 100%;
+}
+
+/*烟花*/
+.firework {
+    cursor: crosshair;
+    display: block;
+    position: absolute;
+    z-index: 999;
+}
+
+/*zk封装的弹窗*/
+.zk-modal {
+    position: fixed;
+    top: 0;
+    left: 0;
+    right: 0;
+    bottom: 0;
+    z-index: 1050;
+    display: none;
+    font-size: 14px;
+}
+
+.zk-modal .zk-modal-content {
+    position: relative;
+    width: auto;
+    margin: 11%;
+    padding: 15px;
+    background: #ec44a1;
+    color: #fff;
+    border-radius: 7px;
+}
+
+.zk-modal .zk-modal-content h2.title {
+    text-align: left;
+    font-size: 15px;
+}
+
+.zk-modal .zk-modal-content p.bottom-para {
+    margin-top: 17px;
+}
+
+/*scroll容器*/
+.zk-scroll-wrapper {
+    padding-bottom: 50px;
+}
+
+@-webkit-keyframes ani-modal-in {
+    0% {
+        transform: translateY(-300px);
+        -webkit-transform: translateY(-300px);
+        opacity: 0;
+    }
+
+    100% {
+        transform: none;
+        -webkit-transform: none;
+        opacity: 1;
+    }
+}
+
+.modal-in {
+    animation: ani-modal-in .35s ease;
+    box-shadow: 0 3px 9px rgba(0,0,0,.5);
+}
+
+@-webkit-keyframes ani-modal-out {
+    0% {
+        transform: none;
+        -webkit-transform: none;
+        opacity: 1;
+    }
+    100% {
+        transform: translateY(-300px);
+        -webkit-transform: translateY(-300px);
+        opacity: 0;
+    }
+}
+
+.modal-out {
+    animation: ani-modal-out .35s ease;
+    box-shadow: 0 3px 9px rgba(0,0,0,.5);
+}
+
+/*星星移动*/
+@-webkit-keyframes shock {
+    0% {
+        -webkit-transform: translate3d(0, 0, 0);
+        transform: translate3d(0, 0, 0);
+    }
+
+    30% {
+        -webkit-transform: translate3d(3rem, 2rem, 0);
+        transform: translate3d(3rem, 2rem, 0);
+    }
+
+    60% {
+        -webkit-transform: translate3d(4rem, 3.4rem, 0);
+        transform: translate3d(4rem, 3.4rem, 0);
+    }
+
+    100% {
+        -webkit-transform: translate3d(3rem, 1.9rem, 0);
+        transform: translate3d(3rem, 1.9rem, 0);
+    }
+}
+
+@-webkit-keyframes ani-scale {
+    0% {
+        opacity: 0;
+        -webkit-transform: scale3d(.3,.3,.3);
+        transform: scale3d(.3,.3,.3);
+    }
+
+    20% {
+        -webkit-transform: scale3d(.4,.4,.4);
+        transform: scale3d(.4,.4,.4);
+    }
+
+    40% {
+        -webkit-transform: scale3d(.5,.5,.5);
+        transform: scale3d(.5,.5,.5);
+    }
+
+    60% {
+        opacity: 1;
+        -webkit-transform: scale3d(.6,.6,.6);
+        transform: scale3d(.6,.6,.6);
+    }
+
+    80% {
+        -webkit-transform: scale3d(.97,.97,.97);
+        transform: scale3d(.97,.97,.97);
+    }
+
+    100% {
+        opacity: 1;
+        -webkit-transform: scale3d(1,1,1);
+        transform: scale3d(1,1,1);
+    }
+}
+
+@-webkit-keyframes ani-rotate {
+    0% {
+        -webkit-transform: rotate(0deg);
+    }
+
+    100% {
+        -webkit-transform: rotate(360deg);
+    }
+}
+
+/*修改mui框架*/
+.mui-popup {
+    top: 45%;
+}
+
+.zk-scroll-wrapper .my-cell {
+    position: absolute;
+    bottom: 0;
+    left: 0;
+    z-index: 1090;
+    background: #eee;
+}
+
+.border-top {
+    border-top: 1px solid #e0e0e0;
+}
+
+/*降落花朵*/
+.flower-drop {
+    position: absolute;
+    top: -1000px;
+    left: 0;
+    width: 100%;
+    height: 200%;
+    background: url("../imgs/bg-flower-drop.png") no-repeat top center / 100%;
+    z-index: 1000;
+    display: none;
+}

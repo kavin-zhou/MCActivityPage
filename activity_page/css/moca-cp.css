@@ -1,0 +1,425 @@
+
+.mui-content {
+    background: #fdd5dd;
+}
+.mui-content .cell-bottom-bg {
+    margin: 0 20px;
+    height: 25px;
+    background: url("../images/bg_cell_bottom.png") no-repeat center center / 100%;
+}
+
+.table-header {
+    width: 100%;
+    background: #fdd5dd;
+    position: absolute;
+    overflow: hidden;
+}
+.table-header .header-bg {
+    width: 100%;
+    height: 100%;
+    background: url("../images/icon-title.jpg") no-repeat top center / 100%;
+    padding-top: 94%;
+}
+.table-header .rule-btn {
+    position: absolute;
+    right: 10px;
+    bottom: 38px;
+    z-index: 10000000000;
+}
+.table-header .refresh-btn {
+    position: absolute;
+    right: 15px;
+    top: 20px;
+    z-index: 10000000000;
+}
+
+.zk-table-view {
+    margin: 0 20px;
+    background: #fdd5dd;
+}
+.zk-table-view::before {
+    opacity: 0;
+}
+.zk-table-view::after {
+    opacity: 0;
+}
+
+/*cell title样式*/
+.cell-header {
+    width: 100%;
+    height: 40px;
+    position: relative;
+    background: url("../images/cell_bg_header.png") no-repeat center center / 100%;
+}
+.cell-header span {
+    display: inline-block;
+    margin: 0;
+    text-align: left;
+    height: 45px;
+    padding-top: 10px;
+    position: absolute;
+}
+.cell-header span:nth-child(1) {
+    width: 20%;
+    text-align: center;
+}
+.cell-header span:nth-child(2) {
+    width: 20%;
+    left: 50%;
+    margin-left: -80px;
+}
+.cell-header span:nth-child(3) {
+    width: 24%;
+    left: 50%;
+    margin-left: -8px;
+}
+.cell-header span:nth-child(4) {
+    width: 20%;
+    left: 50%;
+    margin-left: 79px;
+}
+
+/*cell样式*/
+.rank-cell {
+    width: 100%;
+    height: 80px;
+    position: relative;
+    background: url("../images/cell_bg_content.png") no-repeat center center / 100%;
+}
+.rank-cell .intimacy {
+    width: 60px;
+    height: 53px;
+    position: absolute;
+    top: 50%;
+    left: 50%;
+    margin-left: -10px;
+    margin-top: -25px;
+    background: url("../images/icon_rank_heart.png") no-repeat center center / 100%;
+    font-size: .9rem;
+    color: #fff;
+    text-align: center;
+    line-height: 45px;
+}
+.rank-cell .avatar {
+    display: inline-block;
+    width: 50px;
+    height: 50px;
+    background: url("../images/icon_avatar_border.png") no-repeat center center / 92%;
+    position: absolute;
+    top: 50%;
+    margin-top: -25px;
+}
+.rank-cell .avatar.avatar-left {
+    left: 50%;
+    margin-left: -85px;
+}
+.rank-cell .avatar.avatar-right {
+    left: 50%;
+    margin-left: 73px;
+}
+.rank-cell .avatar span {
+    display: inline-block;
+    width: 40px;
+    height: 40px;
+    background: url("../images/icon-avatar.jpg") no-repeat center center / 100%;
+    border-radius: 20px;
+    margin: 5px 0 0 5px;
+}
+.rank-cell .rank-num {
+    display: inline-block;
+    width: 40px;
+    height: 44px;
+    position: absolute;
+    top: 50%;
+    left: 6px;
+    margin-top: -22px;
+    background: url("../images/icon_rank_num.png") no-repeat center center / 100%;
+    color: #fb4670;
+    text-align: right;
+    line-height: 44px;
+    font-size: .95rem;
+    padding-right: 8px;
+}
+
+.flower-left {
+    width: 60px;
+    background: url("../images/flower_left.png") no-repeat center center / 100%;
+    height: 150px;
+    position: absolute;
+    bottom: 0;
+    left: 0;
+    z-index: 10000;
+}
+.flower-right {
+    width: 20%;
+    background: url("../images/flower_right.png") no-repeat center center / 100%;
+    height: 215px;
+    position: absolute;
+    bottom: 0;
+    right: 0;
+    z-index: 10000;
+}
+
+/*公有样式*/
+.float-left {
+    float: left;
+}
+.float-right {
+    float: right;
+}
+.border-bottom {
+    border-bottom: 1px solid #eee;
+}
+
+/*zk封装的弹窗*/
+.zk-modal {
+    position: fixed;
+    top: 0;
+    left: 0;
+    right: 0;
+    bottom: 0;
+    z-index: 1050;
+    display: none;
+    font-size: 14px;
+}
+
+.zk-modal .modal-bg {
+    width: 100%;
+    height: 100%;
+    background: RGBA(0,0,0,.4);
+    z-index: -1;
+    position: absolute;
+}
+
+.zk-modal .zk-modal-content {
+    position: relative;
+    width: auto;
+    margin: 10%;
+    padding: 0;
+    background: #fff;
+    color: #fff;
+    border-radius: 7px;
+    height: 85%;
+    overflow: scroll;
+}
+
+.zk-modal .zk-modal-content p.content {
+    padding: 0 15px;
+    font-size: 12px;
+}
+
+.zk-modal .zk-modal-content p.bottom-para {
+    margin-top: 5px;
+}
+
+.zk-modal .modal-bottom-view {
+    width: 100%;
+    height: 24px;
+    margin: 10px 0 20px;
+    text-align: center;
+}
+
+.zk-modal .modal-bottom-view a {
+    display: inline-block;
+    width: 40%;
+    text-align: center;
+    height: 100%;
+    border-radius: 12px;
+    color: #fff;
+    background: #fb6586;
+    line-height: 24px;
+}
+
+/*scroll容器*/
+.zk-scroll-wrapper {
+
+}
+
+@-webkit-keyframes ani-modal-in {
+    0% {
+        transform: translateY(-300px);
+        -webkit-transform: translateY(-300px);
+        opacity: 0;
+    }
+
+    100% {
+        transform: none;
+        -webkit-transform: none;
+        opacity: 1;
+    }
+}
+
+.modal-in {
+    animation: ani-modal-in .35s ease;
+    box-shadow: 0 3px 9px rgba(0,0,0,.5);
+}
+
+@-webkit-keyframes ani-modal-out {
+    0% {
+        transform: none;
+        -webkit-transform: none;
+        opacity: 1;
+    }
+    100% {
+        transform: translateY(-300px);
+        -webkit-transform: translateY(-300px);
+        opacity: 0;
+    }
+}
+
+.modal-out {
+    animation: ani-modal-out .35s ease;
+    box-shadow: 0 3px 9px rgba(0,0,0,.5);
+}
+
+/*心跳动画*/
+@-webkit-keyframes pound {
+    from, to { transform: none; }
+    50% { transform: scale(1.18); }
+}
+.heart {
+    -webkit-animation: pound .8s infinite alternate;
+    animation: pound .8s infinite alternate;
+}
+
+/*星星移动*/
+@-webkit-keyframes shock {
+    0% {
+        -webkit-transform: translate3d(0, 0, 0);
+        transform: translate3d(0, 0, 0);
+    }
+
+    30% {
+        -webkit-transform: translate3d(3rem, 2rem, 0);
+        transform: translate3d(3rem, 2rem, 0);
+    }
+
+    60% {
+        -webkit-transform: translate3d(4rem, 3.4rem, 0);
+        transform: translate3d(4rem, 3.4rem, 0);
+    }
+
+    100% {
+        -webkit-transform: translate3d(3rem, 1.9rem, 0);
+        transform: translate3d(3rem, 1.9rem, 0);
+    }
+}
+
+@-webkit-keyframes ani-scale {
+    0% {
+        opacity: 0;
+        -webkit-transform: scale3d(.3,.3,.3);
+        transform: scale3d(.3,.3,.3);
+    }
+
+    20% {
+        -webkit-transform: scale3d(.4,.4,.4);
+        transform: scale3d(.4,.4,.4);
+    }
+
+    40% {
+        -webkit-transform: scale3d(.5,.5,.5);
+        transform: scale3d(.5,.5,.5);
+    }
+
+    60% {
+        opacity: 1;
+        -webkit-transform: scale3d(.6,.6,.6);
+        transform: scale3d(.6,.6,.6);
+    }
+
+    80% {
+        -webkit-transform: scale3d(.97,.97,.97);
+        transform: scale3d(.97,.97,.97);
+    }
+
+    100% {
+        opacity: 1;
+        -webkit-transform: scale3d(1,1,1);
+        transform: scale3d(1,1,1);
+    }
+}
+
+@-webkit-keyframes ani-rotate {
+    0% {
+        -webkit-transform: rotate(0deg);
+    }
+
+    100% {
+        -webkit-transform: rotate(360deg);
+    }
+}
+
+.zk-scroll-wrapper .my-cell {
+    position: absolute;
+    bottom: 0;
+    left: 0;
+    z-index: 1090;
+    background: #eee;
+}
+
+.border-top {
+    border-top: 1px solid #e0e0e0;
+}
+
+/*降落花朵*/
+.flower-drop {
+    position: absolute;
+    top: -1000px;
+    left: 0;
+    width: 100%;
+    height: 200%;
+    background: url("../imgs/bg-flower-drop.png") no-repeat top center / 100%;
+    z-index: 1000;
+    display: none;
+}
+
+/*弹出窗*/
+.popover {
+    text-align: center;
+    padding-bottom: 10px;
+    position: relative;
+    background: #fdbcca;
+}
+.popover .info-view {
+    height: 20px;
+    margin: 6px 15px -4px;
+}
+.popover .info-view span {
+    display: inline-block;
+    width: 45%;
+    color: #ff6889;
+    font-size: 13px;
+    line-height: 20px;
+    text-align: center;
+
+    overflow: hidden;
+    white-space: nowrap;
+    text-overflow: ellipsis;
+}
+.popover .info-view span:nth-child(1) {
+    float: left;
+}
+.popover .info-view span:nth-child(2) {
+    float: right;
+}
+.popover div.flower-num {
+    display: inline-block;
+    width: 50%;
+    height: 30px;
+    float: left;
+    margin-top: 8px;
+}
+.popover div.flower-num a {
+    display: inline-block;
+    line-height: 30px;
+    color: #f13563;
+    width: 80%;
+    height: 100%;
+    border-radius: 2px;
+    padding-top: 5px;
+    background: #fff;
+}
+.popover div.flower-num a img {
+    width: 70%;
+}

@@ -1,0 +1,222 @@
+/* 配色方案
+*  全局黄色 #fadb2c
+   黄色高亮 #f3d33d
+*/
+
+/*通用配置*/
+*, ::before, ::after {
+    margin: 0;
+    padding: 0;
+    -webkit-tap-highlight-color: transparent; /*清除点击默认的高亮效果 加颜色#ddd可测试一下*/
+    -webkit-box-sizing: border-box; /*以border开始计算宽度*/
+}
+
+html, body {
+    font-family: "Microsoft YaHei", sans-serif;
+    color: #535353;
+    max-width: 768px;
+    min-width: 300px;
+    margin: 0 auto;
+    background: #F4F4F6;
+    font-size: 14px;
+    position: relative;
+}
+
+a {
+    text-decoration: none;
+    color: #535353;
+}
+
+a:hover {
+    text-decoration: none;
+    color: #555;
+}
+
+ul {
+    list-style: none;
+}
+
+input, textarea {
+    border: none;
+    resize: none; /*不让他伸缩*/
+    outline: none; /*清除默认显示选中框效果*/
+    -webkit-appearance: none; /*清除有些输入框的默认的立体效果*/
+    color: #535353;
+}
+
+::-webkit-input-placeholder {
+    color: #bbbbbb;
+}
+
+:focus::-webkit-input-placeholder {
+    opacity: 0.6;
+}
+
+/* 清除浮动 */
+.clearfix::before, .clearfix::after {
+    content: ".";
+    display: block;
+    height: 0;
+    line-height: 0;
+    visibility: hidden;
+    clear: both;
+}
+
+/*设置border的公共类*/
+.border-bottom {
+    border-bottom: 1px solid #eee;
+}
+
+.border-top {
+    border-top: 1px solid #e0e0e0;
+}
+
+/*一行的内容的容器*/
+.loan-row-container {
+    width: 100%;
+    height: 48px;
+    background: white;
+    overflow: hidden;
+
+    position: relative;
+}
+
+.loan-title {
+    display: inline-block;
+    color: #535353;
+    line-height: 48px;
+    width: 80px;
+    text-align: right;
+
+    position: absolute;
+}
+
+.loan-row-container .loan-input {
+    font-size: 13px;
+    display: block;
+    color: #bbbbbb;
+    line-height: 20px;
+    width: 100%;
+    padding-left: 90px;
+    padding-right: 30px;
+    margin-top: 14px;
+}
+
+/*底部客服电话和按钮*/
+.bottom-container {
+    width: 100%;
+    height: 100px;
+    margin: 0 auto;
+
+    position: fixed;
+    bottom: 0;
+    left: 0;
+}
+
+.bottom-container .service-container {
+    width: 100%;
+    height: 32px;
+    text-align: center;
+    padding-top: 6px;
+}
+
+.bottom-container .service-container em {
+    display: inline-block;
+    width: 21px;
+    height: 20px;
+    background: red;
+    background: url("../imgs/icon-service.png") no-repeat;
+    background-size: 21px 20px;
+    margin-right: 4px;
+    vertical-align: middle;
+}
+
+.bottom-container .service-container p {
+    display: inline-block;
+    font-size: 10px;
+    color: #bbb;
+    vertical-align: middle;
+}
+
+/*底部按钮通用配置*/
+.bottom-btn {
+    background: #fadb2c;
+    text-align: center;
+    color: #535353;
+    font-size: 16px;
+    height: 48px;
+    line-height: 48px;
+    margin: 0 20px;
+    border: none;
+    max-width: 768px;
+    border-radius: 7px;
+
+    position: fixed;
+    bottom: 20px;
+    left: 0;
+    right: 0;
+}
+
+.bottom-btn:hover {
+    background-color: #f3d33d;
+}
+
+/*========动画=========*/
+@-webkit-keyframes slideup {
+    0% {
+        transform: translateY(1000px);
+        -webkit-transform: translateY(1000px);
+    }
+    100% {
+        transform: none;
+        -webkit-transform: none;
+    }
+}
+
+.slideup {
+    animation: slideup .25s ease;
+}
+
+@-webkit-keyframes opacity-show {
+    0% {
+        opacity: 0;
+    }
+    100% {
+        opacity: 1;
+    }
+}
+
+.opacity-show {
+    animation: opacity-show .25s ease;
+}
+
+/*反向动画*/
+@-webkit-keyframes slidedown {
+    0% {
+        transform: none;
+        -webkit-transform: none;
+    }
+    100% {
+        transform: translateY(1000px);
+        -webkit-transform: translateY(1000px);
+    }
+}
+
+.slidedown {
+    display: block;
+    animation: slidedown .25s ease;
+}
+
+@-webkit-keyframes opacity-fade {
+    0% {
+        opacity: 1;
+    }
+    100% {
+        opacity: 0;
+    }
+}
+
+.opacity-fade {
+    animation: opacity-fade .25s ease;
+}
+

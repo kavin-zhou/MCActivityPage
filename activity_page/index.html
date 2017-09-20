@@ -1,0 +1,170 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="Content-Type" content="text/html; charset=utf-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width,initial-scale=1.0,maximum-scale=1.0,user-scalable=0">
+    <meta name="apple-mobile-web-app-capable" content="yes">
+    <meta name="apple-mobile-web-app-status-bar-style" content="black">
+    <meta name="format-detection" content="telephone=no">
+    <meta content="email=no" name="format-detection">
+    <title>摩擦亲密度排行榜</title>
+
+    <link rel="stylesheet" href="lib/mui/css/mui.min.css">
+    <script src="js/jquery-1.11.1.min.js"></script>
+    <script src="lib/mui/js/mui.js"></script>
+    <script src="lib/emojify/js/emojify.min.js"></script>
+    <link href="lib/emojify/css/data-uri/emojify-emoticons.min.css" rel="stylesheet" type="text/css">
+    <link rel="stylesheet" href="css/moca-cp.css">
+    <style>
+        .emoji { width: 18px; height: 18px; display: inline-block; margin-bottom: 5px; background-size: 18px; }
+    </style>
+</head>
+<body>
+<main>
+    <div id="rule-view" class="zk-modal">
+        <div class="modal-bg"></div>
+        <div class="zk-modal-content">
+            <img src="images/bg_rule_header.jpg" alt="" width="100%">
+            <p class="content">
+                1.活动期间，给心爱的TA赠送鲜花，或TA赠花给你，都会增加你们的亲密度。与你亲密度最高的人，就是你的最佳CP。<br />
+                2.本活动无需报名，活动期间通过私聊、群聊、评论和此页面赠送的鲜花都会计入亲密度。<br />
+                3.活动结束后，将评选出最佳CP，有丰厚奖品发放。<br />
+                4.活动时间为2017.05.01到05.31<br />
+                5.本活动解释权归摩擦官方所有。有疑问请联系客服：028-65789575<br />
+            </p>
+            <img src="images/bg_gift_header.png" alt="" width="100%">
+            <p class="content bottom-para">
+                1.第4到10名，每人获得小秘书送出的999朵鲜花。<br />
+                2.第3名的CP分别获得小秘书送出的1314朵鲜花。<br />
+                3.第2名的CP分别获得小秘书送出的2333朵鲜花。<br />
+                4.第1名的CP分别获得小秘书送出的9999朵鲜花。<br />
+            </p>
+            <div class="modal-bottom-view">
+                <a class="modal-btn" href="javascript:;">我知道了</a>
+            </div>
+        </div>
+    </div>
+
+    <div id="pullrefresh" class="mui-content mui-scroll-wrapper zk-scroll-wrapper">
+        <div class="mui-scroll">
+            <div class="table-header mui-clearfix">
+                <div class="header-bg">
+                </div>
+                <div class="rule-btn heart">
+                    <img src="images/icon_rule.png" alt="" width="55" height="55">
+                </div>
+                <div class="refresh-btn heart">
+                    <img src="images/icon_refresh.png" alt="" width="40" height="40">
+                </div>
+            </div>
+            <!--数据列表-->
+            <ul id="list-container" class="mui-table-view mui-table-view-chevron zk-table-view">
+                <li class="cell-header">
+                    <span><img src="images/title_rank.png" alt="" width="40"></span>
+                    <span><img src="images/title_woman.png" alt="" width="40" ></span>
+                    <span><img src="images/title_ship.png" alt="" width="60"></span>
+                    <span><img src="images/title_man.png" alt="" width="40"></span>
+                </li>
+
+                <li class="rank-cell">
+                    <span class="intimacy">
+                        100000
+                    </span>
+                    <span class="avatar avatar-left" data-uid="110" data-nick="我是周杰伦">
+                        <span></span>
+                    </span>
+                    <span class="avatar avatar-right" data-uid="120" data-nick="这是一首简单的小情歌">
+                        <span></span>
+                    </span>
+                    <span class="rank-num">01</span>
+                </li>
+            </ul>
+            <div class="cell-bottom-bg"></div>
+            <div class="flower-left"></div>
+            <div class="flower-right"></div>
+        </div>
+    </div>
+
+    <div id="popover" class="mui-popover popover mui-clearfix">
+        <div class="info-view">
+            <span id="moca-id" class="moca-id">ID: 2648563</span>
+            <span id="moca-nick" class="moca-nick">我是喵星人</span>
+        </div>
+        <div class="flower-num">
+            <a href="javascript:;" data-num="1">
+                <img src="images/icon_num_1.png" alt="">
+            </a>
+        </div>
+        <div class="flower-num">
+            <a href="javascript:;" data-num="11">
+                <img src="images/icon_num_11.png" alt="">
+            </a>
+        </div>
+        <div class="flower-num">
+            <a href="javascript:;" data-num="99">
+                <img src="images/icon_num_99.png" alt="">
+            </a>
+        </div>
+        <div class="flower-num">
+            <a href="javascript:;" data-num="520">
+                <img src="images/icon_num_520.png" alt="">
+            </a>
+        </div>
+    </div>
+
+    <div class="flower-drop">
+
+    </div>
+
+</main>
+
+<script>
+    emojify.setConfig({img_dir:'lib/emojify/images/basic'});
+</script>
+<script src="js/base.js"></script>
+<script src="js/index.js"></script>
+<script>
+    var headerHeight = $('.table-header').height();
+    $('#list-container').css({
+        'marginTop': headerHeight
+    });
+    updateCellHeight();
+
+    (function(){
+        var $ruleView = $('#rule-view');
+        var $modalContent = $('.zk-modal-content');
+        $('.rule-btn').get(0).addEventListener('tap', function () {
+            console.log('点击规则');
+            $(this).removeClass('heart');
+
+            $ruleView.css('opacity', 0);
+            $ruleView.animate({
+                'opacity': 1,
+            }, 200);
+            $ruleView.css('display', 'block');
+            $modalContent.removeClass('modal-out').addClass('modal-in');
+        });
+
+        $ruleView.get(0).addEventListener('tap', function () {
+            $ruleView.animate({
+                'opacity': 0
+            }, 200);
+            $modalContent.removeClass('modal-in').addClass('modal-out');
+            setTimeout(function () {
+                $ruleView.css('display', 'none');
+            }, 250);
+        });
+
+        $('.refresh-btn').get(0).addEventListener('tap', function () {
+            mui('#pullrefresh').pullRefresh().pulldownLoading();
+            $(this).removeClass('heart');
+        });
+
+    }());
+
+</script>
+
+</body>
+</html>
